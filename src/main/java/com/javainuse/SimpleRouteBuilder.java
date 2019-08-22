@@ -1,21 +1,27 @@
 package com.javainuse;
 
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.*;
+
+// import org.apache.camel.component.http4;
 
 public class SimpleRouteBuilder extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        // from("file:C:/inputFolder?noop=true").to("file:C:/outputFolder");
-        // from("file:/Users/krzyczak/Desktop/camel/camel-java-dsl/in.txt?noop=true").process(new MyProcessor()).to("file:/Users/krzyczak/Desktop/camel/camel-java-dsl/out.txt");
-        // from("file:/Users/krzyczak/Desktop/camel/camel-java-dsl/in.txt?noop=true")
-        //     .to("file:/Users/krzyczak/Desktop/camel/camel-java-dsl/out.txt");
+        // from("file:input?noop=true")
+        //     .log("\n\n------------------------------------\n\n")
+        //     .log("Read from the input file")
+        //     .to("file:output")
+        //     .log("Written to output file")
+        //     .log("\n\n------------------------------------\n\n")
+        //     .end();
 
-        // from("direct:start")
-        from("file:input?noop=true")
-            .log("Read from the input file")
-            .to("file:destination")
-            .log("Written to output file");
+        from("direct:start")
+            .setHeader(Exchange.HTTP_METHOD, constant(org.apache.camel.component.http4.HttpMethods.POST))
+            // .setHeader(Exchange.HTTP_METHOD, constant("POST"))
+            .to("http4://www.google.com")
+            .to("mock:results");
     }
 
 }
