@@ -18,6 +18,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.ClassRule;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+//import org.springframework.web.client.RestTemplate;
+
+import org.springframework.core.log.LogDelegateFactory;
+import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
 
 /**
  *
@@ -43,7 +49,7 @@ public class MainAppTest {
   @After
   public void tearDown() {
   }
-
+  
   @ClassRule
   public static HoverflyRule hoverflyRule = HoverflyRule
           .inCaptureOrSimulationMode("account.json", HoverflyConfig.configs().proxyLocalHost()).printSimulationData();
@@ -53,21 +59,23 @@ public class MainAppTest {
    */
   @Test
   public void testMain() throws IOException {
-    System.out.println("main");
-    String[] args = null;
-//    MainApp.main(args);
-    // TODO review the generated test code and remove the default call to fail.
-    // fail("The test case is a prototype.");
-    assertEquals(2, 2);
+    System.out.println("testMain");
 
-    String fileString = new String(Files.readAllBytes(Paths.get("./experiments/in.txt")), StandardCharsets.UTF_8);
-    System.out.println("Contents (Java 7 with character encoding ) : " + fileString);
+    //String fileString = new String(Files.readAllBytes(Paths.get("./experiments/in.txt")), StandardCharsets.UTF_8);
+    //System.out.println("Contents (Java 7 with character encoding ) : " + fileString);
 
-    String outFileContents = new String(Files.readAllBytes(Paths.get("./experiments/out.txt")), StandardCharsets.UTF_8);
-    System.out.println("Contents (Java 7 with character encoding ) : " + outFileContents);
+    //String outFileContents = new String(Files.readAllBytes(Paths.get("./experiments/out.txt")), StandardCharsets.UTF_8);
+    //System.out.println("Contents (Java 7 with character encoding ) : " + outFileContents);
+ 
+    RestTemplate restTemplate = new RestTemplate();
 
-//    assertEquals("Janusz", outFileContents);
-    assertEquals(3, 3);
+    String result = restTemplate.getForObject("http://ip.jsontest.com", String.class);
+ 
+    //System.out.println(result);
+    
+    assertEquals("{\"ip\": \"80.87.30.34\"}\n", result);
   }
+  
+  
 
 }

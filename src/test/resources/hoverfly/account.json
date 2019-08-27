@@ -1,6 +1,42 @@
 {
   "data" : {
-    "pairs" : [ ],
+    "pairs" : [ {
+      "request" : {
+        "path" : {
+          "exactMatch" : ""
+        },
+        "method" : {
+          "exactMatch" : "GET"
+        },
+        "destination" : {
+          "exactMatch" : "ip.jsontest.com"
+        },
+        "scheme" : {
+          "exactMatch" : "http"
+        },
+        "query" : {
+          "exactMatch" : ""
+        },
+        "body" : {
+          "exactMatch" : ""
+        }
+      },
+      "response" : {
+        "status" : 200,
+        "body" : "{\"ip\": \"80.87.30.34\"}\n",
+        "encodedBody" : false,
+        "templated" : false,
+        "headers" : {
+          "Access-Control-Allow-Origin" : [ "*" ],
+          "Content-Length" : [ "22" ],
+          "Content-Type" : [ "application/json" ],
+          "Date" : [ "Tue, 27 Aug 2019 14:30:28 GMT" ],
+          "Hoverfly" : [ "Was-Here" ],
+          "Server" : [ "Google Frontend" ],
+          "X-Cloud-Trace-Context" : [ "956873469ff9a741c7f3dbdf03ab5a91;o=1" ]
+        }
+      }
+    } ],
     "globalActions" : {
       "delays" : [ ]
     }
