@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javainuse.MainAppTest" time="0.985" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javainuse.MainAppTest" time="6.551" tests="2" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib"/>
@@ -63,5 +63,312 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testMain" classname="com.javainuse.MainAppTest" time="0.148"/>
+  <testcase name="testRestTemplateRequest" classname="com.javainuse.MainAppTest" time="0.706"/>
+  <testcase name="testCamelRoutes" classname="com.javainuse.MainAppTest" time="5.794">
+    <failure message="expected:&lt;[{&quot;ip&quot;: &quot;80.87.30.34&quot;}]&#10;&gt; but was:&lt;[2019-08-27 15:56:38 | {&quot;ip&quot;: &quot;80.87.30.34&quot;}&#10;&#10;2019-08-27 15:59:41 | {&quot;ip&quot;: &quot;80.87.30.34&quot;}&#10;]&#10;&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: 
+expected:<[{"ip": "80.87.30.34"}]
+> but was:<[2019-08-27 15:56:38 | {"ip": "80.87.30.34"}
+
+2019-08-27 15:59:41 | {"ip": "80.87.30.34"}
+]
+>
+	at com.javainuse.MainAppTest.testCamelRoutes(MainAppTest.java:94)
+]]></failure>
+    <system-out><![CDATA[testCamelRoutes
+Hell1o
+15:59:40.042 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from builder: Routes: []
+15:59:40.075 [main] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.13.0 (CamelContext: camel-1) is starting
+15:59:40.075 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ClassResolver=org.apache.camel.impl.DefaultClassResolver@5939a379, PackageScanClassResolver=org.apache.camel.impl.DefaultPackageScanClassResolver@e1de817, ApplicationContextClassLoader=sun.misc.Launcher$AppClassLoader@6bc7c054
+15:59:40.077 [main] INFO org.apache.camel.management.ManagedManagementStrategy - JMX is enabled
+15:59:40.123 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@55b53d44
+15:59:40.165 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=context,name="camel-1"
+15:59:40.165 [main] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@bae7dc0
+15:59:40.191 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultTypeConverter
+15:59:40.197 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Found 3 packages with 15 @Converter classes to load
+15:59:40.219 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading file META-INF/services/org/apache/camel/TypeConverter to retrieve list of packages, from url: jar:file:/Users/krzyczak/.m2/repository/org/apache/camel/camel-core/2.13.0/camel-core-2.13.0.jar!/META-INF/services/org/apache/camel/TypeConverter
+15:59:40.220 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading file META-INF/services/org/apache/camel/TypeConverter to retrieve list of packages, from url: jar:file:/Users/krzyczak/.m2/repository/org/apache/camel/camel-cxf/2.13.0/camel-cxf-2.13.0.jar!/META-INF/services/org/apache/camel/TypeConverter
+15:59:40.221 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading file META-INF/services/org/apache/camel/TypeConverter to retrieve list of packages, from url: jar:file:/Users/krzyczak/.m2/repository/org/apache/camel/camel-spring/2.13.0/camel-spring-2.13.0.jar!/META-INF/services/org/apache/camel/TypeConverter
+15:59:40.221 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loading file META-INF/services/org/apache/camel/TypeConverter to retrieve list of packages, from url: jar:file:/Users/krzyczak/.m2/repository/org/apache/camel/camel-http/2.13.0/camel-http-2.13.0.jar!/META-INF/services/org/apache/camel/TypeConverter
+15:59:40.227 [main] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - Loaded 5 @Converter classes
+15:59:40.239 [main] INFO org.apache.camel.impl.converter.DefaultTypeConverter - Loaded 199 type converters
+15:59:40.244 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=EndpointRegistry
+15:59:40.246 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultExecutorServiceManager
+15:59:40.247 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=SharedProducerServicePool
+15:59:40.247 [main] DEBUG org.apache.camel.impl.SharedProducerServicePool - Starting service pool: org.apache.camel.impl.SharedProducerServicePool@4f32a3ad
+15:59:40.248 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultInflightRepository
+15:59:40.250 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultShutdownStrategy
+15:59:40.252 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultPackageScanClassResolver
+15:59:40.271 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.DefaultComponentResolver@7bd7d6d6 to resolve component with name: file
+15:59:40.271 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: file in registry: null
+15:59:40.274 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: file via type: org.apache.camel.component.file.FileComponent via: META-INF/services/org/apache/camel/component/file
+15:59:40.284 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="file"
+15:59:40.285 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[file://experiments/?fileName=in.txt&noop=true], path=[experiments/]
+15:59:40.299 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: fileName on bean: Endpoint[file://experiments/?fileName=in.txt&noop=true] with value: in.txt
+15:59:40.300 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: noop on bean: Endpoint[file://experiments/?fileName=in.txt&noop=true] with value: true
+15:59:40.300 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - file://experiments/?fileName=in.txt&noop=true converted to endpoint: Endpoint[file://experiments/?fileName=in.txt&noop=true] by component: org.apache.camel.component.file.FileComponent@49c90a9c
+15:59:40.305 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="file://experiments/\?fileName=in.txt&noop=true"
+15:59:40.312 [main] DEBUG org.apache.camel.processor.interceptor.DefaultChannel - Initialize channel for target: 'SetHeader[CamelHttpMethod, simple{Simple: GET}]'
+15:59:40.316 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=tracer,name=BacklogTracer
+15:59:40.321 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=tracer,name=BacklogDebugger
+15:59:40.332 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+15:59:40.341 [main] DEBUG org.apache.camel.processor.interceptor.DefaultChannel - Initialize channel for target: 'Log[Janus]'
+15:59:40.342 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.DefaultComponentResolver@7bd7d6d6 to resolve component with name: http
+15:59:40.343 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: http in registry: null
+15:59:40.344 [main] DEBUG org.apache.camel.impl.DefaultComponentResolver - Found component: http via type: org.apache.camel.component.http.HttpComponent via: META-INF/services/org/apache/camel/component/http
+15:59:40.348 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="http"
+15:59:40.348 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[http://ip.jsontest.com], path=[ip.jsontest.com]
+15:59:40.351 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+15:59:40.352 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.protocol.version = HTTP/1.1
+15:59:40.353 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+15:59:40.353 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.protocol.cookie-policy = default
+15:59:40.353 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.protocol.element-charset = US-ASCII
+15:59:40.353 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.protocol.content-charset = ISO-8859-1
+15:59:40.354 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@42b3b079
+15:59:40.354 [main] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams - Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+15:59:40.361 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - http://ip.jsontest.com converted to endpoint: Endpoint[http://ip.jsontest.com] by component: org.apache.camel.component.http.HttpComponent@2fba3fc4
+15:59:40.362 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="http://ip.jsontest.com"
+15:59:40.363 [main] DEBUG org.apache.camel.processor.interceptor.DefaultChannel - Initialize channel for target: 'To[http://ip.jsontest.com]'
+15:59:40.365 [main] DEBUG org.apache.camel.processor.interceptor.DefaultChannel - Initialize channel for target: 'process[com.javainuse.SimpleRouteBuilder$1@13b3d178]'
+15:59:40.365 [main] DEBUG org.apache.camel.impl.DefaultComponent - Creating endpoint uri=[file://experiments/?fileExist=Append&fileName=out.txt], path=[experiments/]
+15:59:40.367 [main] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Promoting fallback type converter as a known type converter to convert from: org.apache.camel.component.file.GenericFileExist to: java.lang.String for the fallback converter: org.apache.camel.impl.converter.EnumTypeConverter@51c693d
+15:59:40.367 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: fileExist on bean: Endpoint[file://experiments/?fileExist=Append&fileName=out.txt] with value: Append
+15:59:40.367 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: fileName on bean: Endpoint[file://experiments/?fileExist=Append&fileName=out.txt] with value: out.txt
+15:59:40.367 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - file://experiments/?fileExist=Append&fileName=out.txt converted to endpoint: Endpoint[file://experiments/?fileExist=Append&fileName=out.txt] by component: org.apache.camel.component.file.FileComponent@49c90a9c
+15:59:40.369 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="file://experiments/\?fileExist=Append&fileName=out.txt"
+15:59:40.369 [main] DEBUG org.apache.camel.processor.interceptor.DefaultChannel - Initialize channel for target: 'To[file:experiments/?fileName=out.txt&fileExist=Append]'
+15:59:40.371 [main] DEBUG org.apache.camel.processor.interceptor.DefaultChannel - Initialize channel for target: 'Log[
+
+------------ DONE ----------------------
+
+]'
+15:59:40.378 [main] INFO org.apache.camel.impl.DefaultCamelContext - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+15:59:40.378 [main] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+15:59:40.379 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route1 having autoStartup=true
+15:59:40.379 [main] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route1
+15:59:40.382 [main] INFO org.apache.camel.component.file.FileEndpoint - Endpoint is configured with noop=true so forcing endpoint to be idempotent as well
+15:59:40.382 [main] INFO org.apache.camel.component.file.FileEndpoint - Using default memory based idempotent repository with cache max size: 1000
+15:59:40.383 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Pipeline[[Channel[setHeader(CamelHttpMethod, Simple: GET)], Channel[Log(route1)[Janus]], Channel[sendTo(Endpoint[http://ip.jsontest.com])], Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]], Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])], Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]]]
+15:59:40.383 [main] DEBUG org.apache.camel.processor.DefaultErrorHandler - Redelivery enabled: false on error handler: DefaultErrorHandler[Instrumentation:setHeader[setHeader(CamelHttpMethod, Simple: GET)]]
+15:59:40.383 [main] DEBUG org.apache.camel.processor.DefaultErrorHandler - Redelivery enabled: false on error handler: DefaultErrorHandler[Instrumentation:log[Log(route1)[Janus]]]
+15:59:40.386 [main] DEBUG org.apache.commons.httpclient.HttpClient - Java version: 1.8.0_191
+15:59:40.386 [main] DEBUG org.apache.commons.httpclient.HttpClient - Java vendor: Oracle Corporation
+15:59:40.386 [main] DEBUG org.apache.commons.httpclient.HttpClient - Java class path: /Users/krzyczak/Desktop/camel/camel-java-dsl-nb/target/test-classes:/Users/krzyczak/Desktop/camel/camel-java-dsl-nb/target/classes:/Users/krzyczak/.m2/repository/org/apache/camel/camel-core/2.13.0/camel-core-2.13.0.jar:/Users/krzyczak/.m2/repository/org/apache/camel/camel-cxf/2.13.0/camel-cxf-2.13.0.jar:/Users/krzyczak/.m2/repository/org/apache/camel/camel-cxf-transport/2.13.0/camel-cxf-transport-2.13.0.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxrs/2.7.10/cxf-rt-frontend-jaxrs-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-api/2.7.10/cxf-api-2.7.10.jar:/Users/krzyczak/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.2.0/woodstox-core-asl-4.2.0.jar:/Users/krzyczak/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.1.0/xmlschema-core-2.1.0.jar:/Users/krzyczak/.m2/repository/org/apache/geronimo/specs/geronimo-javamail_1.4_spec/1.7.1/geronimo-javamail_1.4_spec-1.7.1.jar:/Users/krzyczak/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-core/2.7.10/cxf-rt-core-2.7.10.jar:/Users/krzyczak/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-impl-2.1.13.jar:/Users/krzyczak/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0-m10/javax.ws.rs-api-2.0-m10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/2.7.10/cxf-rt-bindings-xml-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-transports-http/2.7.10/cxf-rt-transports-http-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/2.7.10/cxf-rt-frontend-jaxws-2.7.10.jar:/Users/krzyczak/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar:/Users/krzyczak/.m2/repository/asm/asm/3.3.1/asm-3.3.1.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/2.7.10/cxf-rt-frontend-simple-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/2.7.10/cxf-rt-ws-addr-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/2.7.10/cxf-rt-ws-policy-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-rs-security-oauth/2.7.10/cxf-rt-rs-security-oauth-2.7.10.jar:/Users/krzyczak/.m2/repository/net/oauth/core/oauth-provider/20100527/oauth-provider-20100527.jar:/Users/krzyczak/.m2/repository/net/oauth/core/oauth/20100527/oauth-20100527.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-beans/3.2.8.RELEASE/spring-beans-3.2.8.RELEASE.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-expression/3.2.8.RELEASE/spring-expression-3.2.8.RELEASE.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-features-clustering/2.7.10/cxf-rt-features-clustering-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/2.7.10/cxf-rt-bindings-soap-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/2.7.10/cxf-rt-databinding-jaxb-2.7.10.jar:/Users/krzyczak/.m2/repository/org/apache/camel/camel-spring/2.13.0/camel-spring-2.13.0.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-aop/3.2.8.RELEASE/spring-aop-3.2.8.RELEASE.jar:/Users/krzyczak/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar:/Users/krzyczak/.m2/repository/org/apache/camel/camel-http/2.13.0/camel-http-2.13.0.jar:/Users/krzyczak/.m2/repository/org/apache/geronimo/specs/geronimo-servlet_3.0_spec/1.0/geronimo-servlet_3.0_spec-1.0.jar:/Users/krzyczak/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/Users/krzyczak/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/Users/krzyczak/.m2/repository/commons-codec/commons-codec/1.8/commons-codec-1.8.jar:/Users/krzyczak/.m2/repository/io/specto/hoverfly-java/0.8.1/hoverfly-java-0.8.1.jar:/Users/krzyczak/.m2/repository/com/squareup/okhttp3/okhttp/3.8.0/okhttp-3.8.0.jar:/Users/krzyczak/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar:/Users/krzyczak/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.8/jackson-datatype-jsr310-2.8.8.jar:/Users/krzyczak/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.8/jackson-dataformat-xml-2.8.8.jar:/Users/krzyczak/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.8/jackson-module-jaxb-annotations-2.8.8.jar:/Users/krzyczak/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar:/Users/krzyczak/.m2/repository/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar:/Users/krzyczak/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Users/krzyczak/.m2/repository/org/zeroturnaround/zt-exec/1.9/zt-exec-1.9.jar:/Users/krzyczak/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar:/Users/krzyczak/.m2/repository/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar:/Users/krzyczak/.m2/repository/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar:/Users/krzyczak/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/Users/krzyczak/.m2/repository/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar:/Users/krzyczak/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/krzyczak/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar:/Users/krzyczak/.m2/repository/org/springframework/spring-jcl/5.1.7.RELEASE/spring-jcl-5.1.7.RELEASE.jar:/Users/krzyczak/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/krzyczak/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/krzyczak/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:
+15:59:40.387 [main] DEBUG org.apache.commons.httpclient.HttpClient - Operating system name: Mac OS X
+15:59:40.387 [main] DEBUG org.apache.commons.httpclient.HttpClient - Operating system architecture: x86_64
+15:59:40.387 [main] DEBUG org.apache.commons.httpclient.HttpClient - Operating system version: 10.12.6
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SUN 1.8: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS & DKS keystores; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunRsaSign 1.8: Sun RSA signature provider
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunEC 1.8: Sun Elliptic Curve provider (EC, ECDSA, ECDH)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunJSSE 1.8: Sun JSSE provider(PKCS12, SunX509/PKIX key/trust factories, SSLv3/TLSv1/TLSv1.1/TLSv1.2)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunJCE 1.8: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunJGSS 1.8: Sun (Kerberos v5, SPNEGO)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunSASL 1.8: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5, NTLM)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - XMLDSig 1.8: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory; C14N 1.0, C14N 1.1, Exclusive C14N, Base64, Enveloped, XPath, XPath2, XSLT TransformServices)
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - SunPCSC 1.8: Sun PC/SC provider
+15:59:40.441 [main] DEBUG org.apache.commons.httpclient.HttpClient - Apple 1.8: Apple Provider
+15:59:40.444 [main] DEBUG org.apache.camel.component.http.HttpProducer - Starting producer: Producer[http://ip.jsontest.com]
+15:59:40.445 [main] DEBUG org.apache.camel.impl.ProducerCache - Adding to producer cache with key: Endpoint[http://ip.jsontest.com] for producer: Producer[http://ip.jsontest.com]
+15:59:40.445 [main] DEBUG org.apache.camel.processor.DefaultErrorHandler - Redelivery enabled: false on error handler: DefaultErrorHandler[Instrumentation:to[sendTo(Endpoint[http://ip.jsontest.com])]]
+15:59:40.445 [main] DEBUG org.apache.camel.processor.DefaultErrorHandler - Redelivery enabled: false on error handler: DefaultErrorHandler[Instrumentation:process[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]]]
+15:59:40.446 [main] DEBUG org.apache.camel.component.file.GenericFileProducer - Starting producer: Producer[file://experiments/?fileExist=Append&fileName=out.txt]
+15:59:40.446 [main] DEBUG org.apache.camel.impl.ProducerCache - Adding to producer cache with key: Endpoint[file://experiments/?fileExist=Append&fileName=out.txt] for producer: Producer[file://experiments/?fileExist=Append&fileName=out.txt]
+15:59:40.446 [main] DEBUG org.apache.camel.processor.DefaultErrorHandler - Redelivery enabled: false on error handler: DefaultErrorHandler[Instrumentation:to[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])]]
+15:59:40.446 [main] DEBUG org.apache.camel.processor.DefaultErrorHandler - Redelivery enabled: false on error handler: DefaultErrorHandler[Instrumentation:log[Log(route1)[
+
+------------ DONE ----------------------
+
+]]]
+15:59:40.446 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Pipeline[[Channel[setHeader(CamelHttpMethod, Simple: GET)], Channel[Log(route1)[Janus]], Channel[sendTo(Endpoint[http://ip.jsontest.com])], Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]], Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])], Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]]]
+15:59:40.447 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[setHeader(CamelHttpMethod, Simple: GET)]
+15:59:40.447 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Log(route1)[Janus]
+15:59:40.452 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="log1"
+15:59:40.452 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[Log(route1)[Janus]]
+15:59:40.452 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> sendTo(Endpoint[http://ip.jsontest.com])
+15:59:40.455 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to1"
+15:59:40.455 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[sendTo(Endpoint[http://ip.jsontest.com])]
+15:59:40.456 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]
+15:59:40.458 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="process1"
+15:59:40.458 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]]
+15:59:40.458 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])
+15:59:40.460 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to2"
+15:59:40.460 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])]
+15:59:40.460 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Log(route1)[
+
+------------ DONE ----------------------
+
+]
+15:59:40.462 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="log2"
+15:59:40.462 [main] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]
+15:59:40.466 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route1"
+15:59:40.466 [main] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@4b34fff9
+15:59:40.467 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route1 >>> EventDrivenConsumerRoute[Endpoint[file://experiments/?fileName=in.txt&noop=true] -> Pipeline[[Channel[setHeader(CamelHttpMethod, Simple: GET)], Channel[Log(route1)[Janus]], Channel[sendTo(Endpoint[http://ip.jsontest.com])], Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]], Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])], Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]]]]
+15:59:40.467 [main] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1000) on route: route1
+15:59:40.469 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=FileConsumer(0x6e01f9b0)
+15:59:40.469 [main] DEBUG org.apache.camel.component.file.FileConsumer - Starting consumer: Consumer[file://experiments/?fileName=in.txt&noop=true]
+15:59:40.471 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: initialDelay on bean: org.apache.camel.impl.DefaultScheduledPollConsumerScheduler@60b4beb4 with value: 1000
+15:59:40.471 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: useFixedDelay on bean: org.apache.camel.impl.DefaultScheduledPollConsumerScheduler@60b4beb4 with value: true
+15:59:40.471 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: delay on bean: org.apache.camel.impl.DefaultScheduledPollConsumerScheduler@60b4beb4 with value: 500
+15:59:40.471 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: scheduledExecutorService on bean: org.apache.camel.impl.DefaultScheduledPollConsumerScheduler@60b4beb4 with value: null
+15:59:40.471 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Configured property: timeUnit on bean: org.apache.camel.impl.DefaultScheduledPollConsumerScheduler@60b4beb4 with value: MILLISECONDS
+15:59:40.474 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=threadpools,name="FileConsumer(0x6e01f9b0)"
+15:59:40.474 [main] DEBUG org.apache.camel.impl.DefaultExecutorServiceManager - Created new ScheduledThreadPool for source: Consumer[file://experiments/?fileName=in.txt&noop=true] with name: file://experiments/?fileName=in.txt&noop=true. -> org.apache.camel.util.concurrent.SizedScheduledExecutorService@573906eb[file://experiments/?fileName=in.txt&noop=true]
+15:59:40.474 [main] DEBUG org.apache.camel.impl.DefaultScheduledPollConsumerScheduler - Scheduling poll (fixed delay) with initialDelay: 1000, delay: 500 (milliseconds) for: Endpoint[file://experiments/?fileName=in.txt&noop=true]
+15:59:40.475 [main] INFO org.apache.camel.impl.DefaultCamelContext - Route: route1 started and consuming from: Endpoint[file://experiments/?fileName=in.txt&noop=true]
+15:59:40.475 [main] DEBUG org.apache.camel.management.DefaultManagementLifecycleStrategy - Load performance statistics disabled
+15:59:40.475 [main] INFO org.apache.camel.impl.DefaultCamelContext - Total 1 routes, of which 1 is started.
+15:59:40.476 [main] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.13.0 (CamelContext: camel-1) started in 0.401 seconds
+15:59:41.481 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileEndpoint - Parameters for Generic file process strategy {noop=true, readLockCheckInterval=1000, readLock=markerFile, readLockTimeout=10000, readLockLoggingLevel=WARN, readLockMinLength=1}
+15:59:41.485 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileEndpoint - Using Generic file process strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@21586b7a
+15:59:41.485 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.strategy.MarkerFileExclusiveReadLockStrategy - Prepare on startup by deleting orphaned lock files from: experiments
+15:59:41.489 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileConsumer - Took 0.004 seconds to poll: experiments
+15:59:41.492 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileConsumer - Total 1 files to consume
+15:59:41.494 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileConsumer - About to process file: GenericFile[in.txt] using exchange: Exchange[in.txt]
+15:59:41.533 [Camel (camel-1) thread #0 - file://experiments/] INFO route1 - Janus
+15:59:41.533 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.processor.SendProcessor - >>>> Endpoint[http://ip.jsontest.com] Exchange[in.txt]
+15:59:41.542 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Promoting fallback type converter as a known type converter to convert from: org.apache.camel.component.http.HttpMethods to: java.lang.String for the fallback converter: org.apache.camel.impl.converter.EnumTypeConverter@51c693d
+15:59:41.559 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.http.HttpProducer - Executing http GET method: http://ip.jsontest.com/
+15:59:41.562 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.MultiThreadedHttpConnectionManager - HttpConnectionManager.getConnection:  config = HostConfiguration[host=http://ip.jsontest.com], timeout = 0
+15:59:41.563 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.MultiThreadedHttpConnectionManager - Allocating new connection, hostConfig=HostConfiguration[host=http://ip.jsontest.com]
+15:59:41.565 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.HttpConnection - Open connection to ip.jsontest.com:80
+15:59:41.577 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - >> "GET / HTTP/1.1[\r][\n]"
+15:59:41.577 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.HttpMethodBase - Adding Host request header
+15:59:41.584 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - >> "breadcrumbId: ID-krzyczak-local-51073-1566917979886-0-1[\r][\n]"
+15:59:41.586 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+15:59:41.586 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - >> "Host: ip.jsontest.com[\r][\n]"
+15:59:41.587 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - >> "[\r][\n]"
+15:59:41.742 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "HTTP/1.1 200 OK[\r][\n]"
+15:59:41.742 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "HTTP/1.1 200 OK[\r][\n]"
+15:59:41.743 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "Access-Control-Allow-Origin: *[\r][\n]"
+15:59:41.744 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "Content-Type: application/json[\r][\n]"
+15:59:41.744 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "X-Cloud-Trace-Context: 555f791dd7f4f9c13a217b02f2109c22[\r][\n]"
+15:59:41.744 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "Date: Tue, 27 Aug 2019 14:59:41 GMT[\r][\n]"
+15:59:41.744 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "Server: Google Frontend[\r][\n]"
+15:59:41.744 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "Content-Length: 22[\r][\n]"
+15:59:41.744 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.header - << "[\r][\n]"
+15:59:41.746 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.http.HttpProducer - Http responseCode: 200
+15:59:41.754 [Camel (camel-1) thread #0 - file://experiments/] DEBUG httpclient.wire.content - << "{"ip": "80.87.30.34"}[\n]"
+15:59:41.754 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.HttpMethodBase - Resorting to protocol version default close connection policy
+15:59:41.755 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.HttpMethodBase - Should NOT close connection, using HTTP/1.1
+15:59:41.755 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.HttpConnection - Releasing connection back to connection manager.
+15:59:41.755 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.MultiThreadedHttpConnectionManager - Freeing connection, hostConfig=HostConfiguration[host=http://ip.jsontest.com]
+15:59:41.755 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.util.IdleConnectionHandler - Adding connection at: 1566917981755
+15:59:41.755 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.commons.httpclient.MultiThreadedHttpConnectionManager - Notifying no-one, there are no waiting threads
+15:59:41.756 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.processor.SendProcessor - >>>> Endpoint[file://experiments/?fileExist=Append&fileName=out.txt] Exchange[org.apache.camel.component.file.GenericFileMessage@b89dd68]
+15:59:41.759 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileOperations - Using InputStream to write file: experiments/out.txt
+15:59:41.762 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.GenericFileProducer - Wrote [experiments/out.txt] to [Endpoint[file://experiments/?fileExist=Append&fileName=out.txt]]
+15:59:41.762 [Camel (camel-1) thread #0 - file://experiments/] INFO route1 - 
+
+------------ DONE ----------------------
+
+
+15:59:41.763 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.GenericFileOnCompletion - Done processing file: GenericFile[in.txt] using exchange: Exchange[org.apache.camel.component.file.GenericFileMessage@b89dd68]
+15:59:41.763 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.util.FileUtil - Retrying attempt 0 to delete file: /Users/krzyczak/Desktop/camel/camel-java-dsl-nb/experiments/in.txt.camelLock
+15:59:41.763 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.util.FileUtil - Tried 1 to delete file: /Users/krzyczak/Desktop/camel/camel-java-dsl-nb/experiments/in.txt.camelLock with result: true
+15:59:42.268 [Camel (camel-1) thread #0 - file://experiments/] DEBUG org.apache.camel.component.file.FileConsumer - Took 0.000 seconds to poll: experiments
+15:59:42.481 [main] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.13.0 (CamelContext: camel-1) is shutting down
+15:59:42.482 [main] INFO org.apache.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 1 routes (timeout 300 seconds)
+15:59:42.484 [main] DEBUG org.apache.camel.impl.DefaultExecutorServiceManager - Created new ThreadPool for source: org.apache.camel.impl.DefaultShutdownStrategy@6e005dc9 with name: ShutdownTask. -> org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@3148f668[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0][ShutdownTask]
+15:59:42.486 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.DefaultShutdownStrategy - There are 1 routes to shutdown
+15:59:42.487 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 suspended and shutdown deferred, was consuming from: Endpoint[file://experiments/?fileName=in.txt&noop=true]
+15:59:42.487 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 preparing to shutdown complete.
+15:59:42.487 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.DefaultScheduledPollConsumerScheduler - This consumer is stopping, so cancelling scheduled task: java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@47fc3b5e
+15:59:42.488 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.file.FileConsumer - Stopping consumer: Consumer[file://experiments/?fileName=in.txt&noop=true]
+15:59:42.488 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.SharedProducerServicePool - Stopping service pool: org.apache.camel.impl.SharedProducerServicePool@4f32a3ad
+15:59:42.488 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.http.HttpProducer - Stopping producer: Producer[http://ip.jsontest.com]
+15:59:42.488 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.file.GenericFileProducer - Stopping producer: Producer[file://experiments/?fileExist=Append&fileName=out.txt]
+15:59:42.489 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: Endpoint[file://experiments/?fileName=in.txt&noop=true]
+15:59:42.489 [main] INFO org.apache.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 1 routes completed in 0 seconds
+15:59:42.490 [main] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@4b34fff9
+15:59:42.490 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route1"
+15:59:42.490 [main] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route1
+15:59:42.491 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Consumer[file://experiments/?fileName=in.txt&noop=true]
+15:59:42.491 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=FileConsumer(0x6e01f9b0)
+15:59:42.491 [main] DEBUG org.apache.camel.impl.DefaultExecutorServiceManager - Forcing shutdown of ExecutorService: org.apache.camel.util.concurrent.SizedScheduledExecutorService@573906eb[file://experiments/?fileName=in.txt&noop=true]
+15:59:42.491 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=threadpools,name="FileConsumer(0x6e01f9b0)"
+15:59:42.492 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Pipeline[[Channel[setHeader(CamelHttpMethod, Simple: GET)], Channel[Log(route1)[Janus]], Channel[sendTo(Endpoint[http://ip.jsontest.com])], Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]], Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])], Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]]]
+15:59:42.492 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Pipeline[[Channel[setHeader(CamelHttpMethod, Simple: GET)], Channel[Log(route1)[Janus]], Channel[sendTo(Endpoint[http://ip.jsontest.com])], Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]], Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])], Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]]]
+15:59:42.492 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[setHeader(CamelHttpMethod, Simple: GET)]
+15:59:42.492 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Log(route1)[Janus]
+15:59:42.492 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[Log(route1)[Janus]]
+15:59:42.492 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> sendTo(Endpoint[http://ip.jsontest.com])
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[sendTo(Endpoint[http://ip.jsontest.com])]
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[DelegateSync[com.javainuse.SimpleRouteBuilder$1@13b3d178]]
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[sendTo(Endpoint[file://experiments/?fileExist=Append&fileName=out.txt])]
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Log(route1)[
+
+------------ DONE ----------------------
+
+]
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[Log(route1)[
+
+------------ DONE ----------------------
+
+]]
+15:59:42.493 [main] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route1
+15:59:42.495 [main] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@20f5281c
+15:59:42.495 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=context,name="camel-1"
+15:59:42.495 [main] DEBUG org.apache.camel.impl.DefaultExecutorServiceManager - Forcing shutdown of ExecutorService: org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@3148f668[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1][ShutdownTask]
+15:59:42.495 [main] DEBUG org.apache.camel.impl.DefaultInflightRepository - Shutting down with no inflight exchanges.
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="process1"
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=EndpointRegistry
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="log2"
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to2"
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="file"
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultInflightRepository
+15:59:42.496 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultTypeConverter
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultPackageScanClassResolver
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultExecutorServiceManager
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="log1"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to1"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=tracer,name=BacklogTracer
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="http"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="file://experiments/\?fileExist=Append&fileName=out.txt"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=SharedProducerServicePool
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="file://experiments/\?fileName=in.txt&noop=true"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=tracer,name=BacklogDebugger
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="http://ip.jsontest.com"
+15:59:42.497 [main] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultShutdownStrategy
+15:59:42.498 [main] DEBUG org.apache.camel.util.IntrospectionSupport - Clearing cache[size=0, hits=67, misses=47, evicted=0]
+15:59:42.499 [main] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.13.0 (CamelContext: camel-1) uptime 2.425 seconds
+15:59:42.500 [main] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 2.13.0 (CamelContext: camel-1) is shutdown in 0.018 seconds
+Hell1o
+./experiments/out.txt: 2019-08-27 15:56:38 | {"ip": "80.87.30.34"}
+
+2019-08-27 15:59:41 | {"ip": "80.87.30.34"}
+
+
+2019-08-27 15:56:38 | {"ip": "80.87.30.34"}
+
+2019-08-27 15:59:41 | {"ip": "80.87.30.34"}
+
+
+]]></system-out>
+  </testcase>
 </testsuite>

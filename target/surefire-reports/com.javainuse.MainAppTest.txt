@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: com.javainuse.MainAppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.985 sec - in com.javainuse.MainAppTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.551 sec <<< FAILURE! - in com.javainuse.MainAppTest
+testCamelRoutes(com.javainuse.MainAppTest)  Time elapsed: 5.794 sec  <<< FAILURE!
+org.junit.ComparisonFailure: 
+expected:<[{"ip": "80.87.30.34"}]
+> but was:<[2019-08-27 15:56:38 | {"ip": "80.87.30.34"}
+
+2019-08-27 15:59:41 | {"ip": "80.87.30.34"}
+]
+>
+	at com.javainuse.MainAppTest.testCamelRoutes(MainAppTest.java:94)
+

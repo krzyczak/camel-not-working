@@ -23,7 +23,7 @@
       },
       "response" : {
         "status" : 200,
-        "body" : "{\"ip\": \"80.87.30.34\"}\n",
+        "body" : "janusz",
         "encodedBody" : false,
         "templated" : false,
         "headers" : {

@@ -50,16 +50,16 @@ public class MainAppTest {
   public void tearDown() {
   }
   
-  @ClassRule
-  public static HoverflyRule hoverflyRule = HoverflyRule
-          .inCaptureOrSimulationMode("account.json", HoverflyConfig.configs().proxyLocalHost()).printSimulationData();
+//  @ClassRule
+//  public static HoverflyRule hoverflyRule = HoverflyRule
+//          .inCaptureOrSimulationMode("account.json", HoverflyConfig.configs().proxyLocalHost()).printSimulationData();
 
   /**
    * Test of main method, of class MainApp.
    */
   @Test
-  public void testMain() throws IOException {
-    System.out.println("testMain");
+  public void testRestTemplateRequest() throws IOException {
+    System.out.println("testRestTemplateRequest");
 
     //String fileString = new String(Files.readAllBytes(Paths.get("./experiments/in.txt")), StandardCharsets.UTF_8);
     //System.out.println("Contents (Java 7 with character encoding ) : " + fileString);
@@ -76,6 +76,22 @@ public class MainAppTest {
     assertEquals("{\"ip\": \"80.87.30.34\"}\n", result);
   }
   
-  
+  @Test
+  public void testCamelRoutes() throws IOException, InterruptedException {
+    System.out.println("testCamelRoutes");
+    String[] args = null;
+    MainApp.main(args);
+
+    //String fileString = new String(Files.readAllBytes(Paths.get("./experiments/in.txt")), StandardCharsets.UTF_8);
+    //System.out.println("Contents (Java 7 with character encoding ) : " + fileString);
+
+    Thread.sleep(3000);
+    
+    String outFileContents = new String(Files.readAllBytes(Paths.get("./experiments/out.txt")), StandardCharsets.UTF_8);
+    System.out.println("./experiments/out.txt: " + outFileContents);
+
+    System.out.println(outFileContents);
+    assertEquals("{\"ip\": \"80.87.30.34\"}\n", outFileContents);
+  }
 
 }
