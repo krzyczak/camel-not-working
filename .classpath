@@ -8,4 +8,6 @@
   <!-- <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/> -->
   <classpathentry kind="var" path="M2_REPO/org/apache/camel/camel-core/2.13.0/camel-core-2.13.0.jar"/>
   <!-- <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6-sources.jar"/> -->
+
+  <!-- <classpathentry kind="var" path="M2_REPO/org/apache/camel/camel-http/2.12.0/camel-http-2.12.0.jar"/> -->
 </classpath>
