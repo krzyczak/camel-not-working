@@ -50,9 +50,9 @@ public class MainAppTest {
   public void tearDown() {
   }
   
-//  @ClassRule
-//  public static HoverflyRule hoverflyRule = HoverflyRule
-//          .inCaptureOrSimulationMode("account.json", HoverflyConfig.configs().proxyLocalHost()).printSimulationData();
+  @ClassRule
+  public static HoverflyRule hoverflyRule = HoverflyRule
+          .inCaptureOrSimulationMode("requests.json", HoverflyConfig.configs().proxyLocalHost()).printSimulationData();
 
   /**
    * Test of main method, of class MainApp.
@@ -73,7 +73,7 @@ public class MainAppTest {
  
     //System.out.println(result);
     
-    assertEquals("{\"ip\": \"80.87.30.34\"}\n", result);
+    assertEquals("{\"ip\": \"80.87.30.34\"}", result);
   }
   
   @Test
@@ -91,7 +91,8 @@ public class MainAppTest {
     System.out.println("./experiments/out.txt: " + outFileContents);
 
     System.out.println(outFileContents);
-    assertEquals("{\"ip\": \"80.87.30.34\"}\n", outFileContents);
+    String expectedContent = "{\"ip\": \"80.87.30.34\"}";
+    assertEquals(expectedContent, outFileContents);
   }
 
 }

@@ -18,14 +18,17 @@ public class SimpleRouteBuilder extends RouteBuilder {
             .to("http://ip.jsontest.com").process(new Processor() {
                 @Override
                 public void process(Exchange exchange) throws Exception {
-                    String data = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                    //String data = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
                     // String data = " | " + exchange.getIn().getBody(String.class);
-                    data += " | " + exchange.getIn().getBody(String.class);
-                    data += "\n";
+                    //data += " | " + exchange.getIn().getBody(String.class);
+                    //data += "\n";
+                    String data = exchange.getIn().getBody(String.class);
 
-                    exchange.getIn().setBody(data);
+                    exchange.getIn().setBody(data.trim());
                 }
-            }).to("file:experiments/?fileName=out.txt&fileExist=Append")
+            }).to("file:experiments/?fileName=out.txt")
+            //}).to("file:experiments/?fileName=out.txt&fileExist=Overwrite")
+            //}).to("file:experiments/?fileName=out.txt&fileExist=Append")
             .log("\n\n------------ DONE ----------------------\n\n");
 
         // from("file:input?noop=true")
